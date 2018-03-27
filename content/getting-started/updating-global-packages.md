@@ -11,7 +11,7 @@ To update global packages, type:
 
  `npm update -g <package>`
  
- For example, to update a packages called jshint, you'd type:
+ For example, to update a package called jshint, you'd type:
 
 ```
 npm update -g jshint
