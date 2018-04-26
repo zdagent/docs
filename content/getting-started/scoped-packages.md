@@ -6,7 +6,7 @@ featured: true
 # How to Work with Scoped Packages
 *Requires npm version 2 or greater*
 
-Scopes are used to group related packages together, and to create a namespace, like a domain, for npm modules. This is explained in more detail [here](http://localhost:5000/misc/scope).
+Scopes are used to group related packages together, and to create a namespace, like a domain, for npm modules. This is explained in more detail [here](https://docs.npmjs.com/misc/scope).
 
 If a package's name begins with `@`, then it is a **scoped package**. The scope is everything in between the `@` and the slash.
 
@@ -14,11 +14,11 @@ If a package's name begins with `@`, then it is a **scoped package**. The scope 
 @scope/project-name
 ```
 
-**Each npm user** has their own scope. 
+**Each npm user** has their own scope.
 ```
 @username/project-name
 ```
-**npm Orgs** also have scopes. 
+**npm Orgs** also have scopes.
 
 @orgname/project-name
 
@@ -83,5 +83,3 @@ var projectName = require("@username/project-name")
 ```
 
 For information about using scoped private modules, visit [npmjs.com/private-modules](https://www.npmjs.com/private-modules).
-
-
