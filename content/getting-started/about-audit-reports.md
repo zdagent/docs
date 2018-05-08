@@ -7,6 +7,8 @@ featured: true
 
 Audit reports contain information about security vulnerabilities in your project's dependencies to help you fix the vulnerability or troubleshoot further.
 
+The fields in an audit report are:
+
 * [Severity](#severity)
 * [Description](#description)
 * [Package](#package)
@@ -14,6 +16,22 @@ Audit reports contain information about security vulnerabilities in your project
 * [Dependency of](#dependency-of)
 * [Path](#path)
 * [More info](#more-info)
+
+```
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ high          │ Denial of Service                                            │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ foo                                                          │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ No patch available                                           │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ @npm/spife                                                   │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ @npm/spife > numbat-process > numbat-emitter > foo           │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://nodesecurity.io/advisories/550                       │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+```
 
 ## Severity
 
@@ -36,7 +54,7 @@ The name of the package that contains the vulnerability.
 
 ## Patched in
 
-The semver range that describes what versions contain a fix for the vulnerability.
+The semantic version range that describes which versions contain a fix for the vulnerability.
 
 ## Dependency of
 
