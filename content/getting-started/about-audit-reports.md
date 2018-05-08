@@ -23,11 +23,11 @@ The fields in an audit report are:
 ├───────────────┼──────────────────────────────────────────────────────────────┤
 │ Package       │ foo                                                          │
 ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Patched in    │ No patch available                                           │
+│ Patched in    │ >= 1.1.5 <2.0.0                                              │
 ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Dependency of │ @npm/spife                                                   │
+│ Dependency of │ @npm/example-package                                         │
 ├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Path          │ @npm/spife > numbat-process > numbat-emitter > foo           │
+│ Path          │ @npm/example-package > numbat-process > numbat-emitter > foo │
 ├───────────────┼──────────────────────────────────────────────────────────────┤
 │ More info     │ https://nodesecurity.io/advisories/550                       │
 └───────────────┴──────────────────────────────────────────────────────────────┘
