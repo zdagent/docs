@@ -29,7 +29,7 @@ The <a href="https://docs.npmjs.com/cli/audit">`npm audit`</a> command submits a
 
 # Reviewing and acting on the security audit report
 
-Running `npm audit` will produce a report of security vulnerabilities with the affected package name, vulnerability severity and description, path, and other information, and, if available, commands to apply patches to resolve vulnerabilities. For more information on the fields in the audit report, see "[About audit reports](https://npmjs.com/docs/getting-started/about-audit-reports)"
+Running `npm audit` will produce a report of security vulnerabilities with the affected package name, vulnerability severity and description, path, and other information, and, if available, commands to apply patches to resolve vulnerabilities. For more information on the fields in the audit report, see "[About audit reports](https://docs.npmjs.com/getting-started/about-audit-reports)"
 
 ## Security vulnerabilities found with suggested patches
 
