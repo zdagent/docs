@@ -1,5 +1,5 @@
 <!--
-title: 21 - How to run a security audit
+title: 21 - How to run a security audit with npm audit
 featured: true
 -->
 
