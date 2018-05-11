@@ -41,9 +41,7 @@ If security vulnerabilities are found and patches are available, run the recomme
 
 If the recommended action is a potential breaking change (semantic version major change), it will be followed by a SEMVER WARNING. If the package with the vulnerability has changed its API, you may need to make additional changes to your package's code.
 
-```
-SEMVER WARNING: Recommended action is a potentially breaking change
-```
+<img src="/images/getting-started/audit-report-semver-warning.png" style="border: 1px solid gray;">
 
 ## Security vulnerabilities found requiring manual review
 
