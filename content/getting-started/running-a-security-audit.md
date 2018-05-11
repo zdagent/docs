@@ -11,7 +11,7 @@ A security audit is an assessment of package dependencies for security vulnerabi
 
 **Note: The `npm audit` command is available in npm@6. To upgrade, run `npm install npm@latest -g`.**
 
-The <a href="https://docs.npmjs.com/cli/audit">`npm audit`</a> command submits a description of the dependencies configured in your package to your default registry and asks for a report of known vulnerabilities.
+The <a href="https://docs.npmjs.com/cli/audit">`npm audit`</a> command submits a description of the dependencies configured in your package to your default registry and asks for a report of known vulnerabilities. `npm audit` checks direct dependencies, devDependencies, bundledDependencies, and optionalDependencies, but does not check peerDependencies.
 
 `npm audit` automatically runs when you install a package with `npm install`. You can also run `npm audit` manually on your [locally installed packages](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) to conduct a security audit of the package and produce a report of dependency vulnerabilities and, if available, suggested patches.
 
@@ -35,62 +35,20 @@ Running `npm audit` will produce a report of security vulnerabilities with the a
 
 If security vulnerabilities are found and patches are available, run the recommended commands to apply the patches to your installed dependencies.
 
-```
-# Run  npm install helmet@3.12.0  to resolve 2 vulnerabilities
-┌───────────────┬──────────────────────────────────────────────────────────────┐
-│ low           │ Regular Expression Denial of Service                         │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Package       │ debug                                                        │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Dependency of │ helmet                                                       │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Path          │ helmet > connect > debug                                     │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ More info     │ https://nodesecurity.io/advisories/534                       │
-└───────────────┴──────────────────────────────────────────────────────────────┘
-┌───────────────┬──────────────────────────────────────────────────────────────┐
-│ low           │ Regular Expression Denial of Service                         │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Package       │ debug                                                        │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Dependency of │ helmet                                                       │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Path          │ helmet > connect > finalhandler > debug                      │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ More info     │ https://nodesecurity.io/advisories/534                       │
-└───────────────┴──────────────────────────────────────────────────────────────┘
-
-[!] 2 vulnerabilities found - Packages audited: 918 (466 dev, 87 optional)
-    Severity: 2 Low
-```
+<img src="/images/getting-started/audit-report-vulns-found-patches.png" style="border: 1px solid gray;">
 
 ### SEMVER warnings
 
 If the recommended action is a potential breaking change (semantic version major change), it will be followed by a SEMVER WARNING. If the package with the vulnerability has changed its API, you may need to make additional changes to your package's code.
 
-```
-SEMVER WARNING: Recommended action is a potentially breaking change
-```
+<img src="/images/getting-started/audit-report-semver-warning.png" style="border: 1px solid gray;">
 
 ## Security vulnerabilities found requiring manual review
 
 If security vulnerabilities are found, but no patches are available, the audit report will provide information about the vulnerability so you can investigate further.
 
-```
-┌───────────────┬──────────────────────────────────────────────────────────────┐
-│ high          │ Denial of Service                                            │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Package       │ foo                                                          │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Patched in    │ No patch available                                           │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Dependency of │ @npm/spife                                                   │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Path          │ @npm/spife > numbat-process > numbat-emitter > foo           │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ More info     │ https://nodesecurity.io/advisories/550                       │
-└───────────────┴──────────────────────────────────────────────────────────────┘
-```
+<img src="/images/getting-started/audit-report-vulns-found-manual-review.png" style="border: 1px solid gray;">
+
 
 To address the vulnerability, you can
 
@@ -132,9 +90,7 @@ If you do not want to fix the vulnerability or update the dependent package your
 
 If no security vulnerabilities are found, this means that packages with known vulnerabilities were not found in your package dependency tree. Since the advisory database can be updated at any time, we recommend regularly running `npm audit` manually, or adding `npm audit` to your continuous integration process.
 
-```
-[+] no known vulnerabilities found [30 packages audited]
-```
+<img src="/images/getting-started/audit-report-no-vulns-found.png" style="border: 1px solid gray;">
 
 # Turning off `npm audit` on package installation
 
