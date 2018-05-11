@@ -5,25 +5,11 @@ featured: true
 
 # About audit reports
 
-Audit reports contain information about security vulnerabilities in your project's dependencies to help you fix the vulnerability or troubleshoot further.
+Audit reports contain tables of information about security vulnerabilities in your project's dependencies to help you fix the vulnerability or troubleshoot further.
 
-```
-┌───────────────┬──────────────────────────────────────────────────────────────┐
-│ high          │ Denial of Service                                            │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Package       │ foo                                                          │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Patched in    │ >= 1.1.5 <2.0.0                                              │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Dependency of │ @npm/example-package                                         │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ Path          │ @npm/example-package > numbat-process > numbat-emitter > foo │
-├───────────────┼──────────────────────────────────────────────────────────────┤
-│ More info     │ https://nodesecurity.io/advisories/550                       │
-└───────────────┴──────────────────────────────────────────────────────────────┘
-```
+<img src="/images/getting-started/audit-report-vuln-table.png" style="border: 1px solid gray;">
 
-## Audit report fields
+## Vulnerability table fields
 
 * [Severity](#severity)
 * [Description](#description)
