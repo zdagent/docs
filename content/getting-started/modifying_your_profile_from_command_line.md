@@ -15,7 +15,7 @@ Choose `Profile Settings` from the Avatar menu. The profile page appears.
 Starting from this page, you can:
 
 * Change your avatar (the icon that represents you)
-* Add a Github user name
+* Add a GitHub user name
 * Add a Twitter user name 
 * Change the email that appears with packages
 * Change your password
