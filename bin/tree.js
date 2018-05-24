@@ -85,9 +85,9 @@ emitter.on('file', function (filepath, stat) {
   if (['cli', 'files', 'misc'].indexOf(page.section) > -1) {
     page.edit_url = 'https://github.com/npm/npm/edit/latest/doc/' + page.filename
   } else if (page.section === 'policies') {
-    page.edit_url = 'https://github.com/npm/policies/edit/latest/' + path.basename(page.filename)
+    page.edit_url = 'https://github.com/npm/policies/master/latest/' + path.basename(page.filename)
   } else if (page.section) {
-    page.edit_url = 'https://github.com/npm/docs/edit/latest/content/' + page.filename
+    page.edit_url = 'https://github.com/npm/docs/edit/master/content/' + page.filename
   }
 
   page.href = '/' + page.filename
