@@ -31,9 +31,12 @@ The <a href="https://docs.npmjs.com/cli/audit">`npm audit`</a> command submits a
 
 Running `npm audit` will produce a report of security vulnerabilities with the affected package name, vulnerability severity and description, path, and other information, and, if available, commands to apply patches to resolve vulnerabilities. For more information on the fields in the audit report, see "[About audit reports](https://docs.npmjs.com/getting-started/about-audit-reports)"
 
-## Security vulnerabilities found with suggested patches
+## Security vulnerabilities found with suggested updates
 
-If security vulnerabilities are found and patches are available, run the recommended commands to apply the patches to your installed dependencies.
+If security vulnerabilities are found and updates are available, you can either:
+
+* Run the `npm audit fix` subcommand to automatically install compatible updates to vulnerable dependencies.
+* Run the recommended commands individually to install updates to vulnerable dependencies. (Some updates may be semver-breaking changes; for more information, see "[SEMVER warnings](#SEMVER-warnings)".)
 
 <img src="/images/getting-started/audit-report-vulns-found-patches.png" style="border: 1px solid gray;">
 
