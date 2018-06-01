@@ -1,9 +1,9 @@
 <!--
 title: 03 - How to set up a new npm account & install npm-->
 
-#Getting Started 
+# Getting started 
 
-1. Creat an account from [npmjs.com](http://www.npmjs.com).
+1. Create an account from [npmjs.com](http://www.npmjs.com).
 
 2. Install npm from a terminal console.
 
@@ -11,7 +11,7 @@ title: 03 - How to set up a new npm account & install npm-->
 
 Note: Many of the steps that you can take from the browser can also be taken directly from the Command Line Interface. Skip [here](#Related-CLI-Commands) to learn more. 
 
-## Create an Account
+## Create an account
 
 1. Go to http://www.npmjs.com and click 'log in'.
 
@@ -97,7 +97,7 @@ First:
 
 There are additional resources for beginners and for everyone at the end of this chapter in the "Learn More" section.
 
-## Install npm & Manage npm Versions
+## Install npm & manage npm versions
 
 npm is written in Node.js, so you need to install Node.js in order to use npm. You can install npm via the Node.js website, or by installing a _Node Version Manager_ or NVM. This chapter explains both options. 
 
@@ -120,11 +120,11 @@ If you're using Linux, choose one of these options:
 * scroll through the installers on the [Node.js download page](https://nodejs.org/en/download/)
 * check [NodeSource's binary distributions](https://github.com/nodesource/distributions) to see if there's a more recent version that works with your system. 
 
-##### Less-Common Operating Systems
+##### Less-common operating systems
 
 Click [here](https://nodejs.org/en/download/package-manager/) to learn about installing node.js for a variety of operating systems. 
 
-#### 2. Test your Installation 
+#### 2. Test your installation 
 	
 After installing, run `node -v`. The version should be v8.9.1 or higher.
 
@@ -140,7 +140,7 @@ To be sure that this matches the latest version, scroll to the bottom of this pa
 
 This will install the latest official, tested version of npm. 
 
-### Using a Version Manager to install Node.js and npm
+### Using a version manager to install Node.js and npm
 
 Since npm and node.js products are managed by different entities, updates and maintenance can become complex. Also, the Node.js installation process installs npm in a directory that only has local permissions. This can cause permissions errors when you attempt to run packages globally. 
 
@@ -174,7 +174,7 @@ If you have already set up two-factor authentication, you will be asked for a on
 
 To test that you have successfully logged in, type `npm whoami`.
 
-## Experimenting with the Next Release 
+## Experimenting with the next release 
 
 *For more advanced users*
 
@@ -184,7 +184,7 @@ If you want to try the next, unreleased version of npm to test that packages you
 
 This may simply reinstall the current version, depending on the development cycle. Also, this early version is not final. So features may or may not match what is ultimately released.   
 
-## Learn More
+## Learn more
 
 To learn more about how to use node version manager, nvm, click [here](https://github.com/creationix/nvm/blob/master/README.md#usage).
 
