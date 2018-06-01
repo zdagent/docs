@@ -144,7 +144,7 @@ npm ERR! registry error parsing json
 * Possible temporary npm registry glitch, or corrupted local server cache.
 Run `npm cache clean` and/or try again later.
 * This can be caused by corporate proxies that give HTML
-responses to `package.json` requests. Check npm's proxy [configuration](https://npmjs.org/doc/misc/npm-config.html).
+responses to `package.json` requests. Check npm's proxy [configuration](https://docs.npmjs.com/misc/config).
 * Check that it's not a problem with a package you're trying to install
 (e.g. invalid `package.json`).
 
