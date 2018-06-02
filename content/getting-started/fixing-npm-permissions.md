@@ -44,7 +44,7 @@ To minimize the chance of permissions errors, you can configure npm to use a dif
 
 Test: Download a package globally without using `sudo`.
 
-        npm install -g jshint
+        npm install -gzwhite
 
 Instead of steps 2-4, you can use the corresponding ENV variable (e.g. if you don't want to modify `~/.profile`):
 
